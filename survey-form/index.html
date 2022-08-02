@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Thank You for Coming</p>
+<main>
+    <form action="submit" id="survey-form">
+        <div id="container"> 
+        <section class="info">
+            <h2>Personal Information</h2>
+            <label id="name-label"> Your Name: <input type="text" required id="name" placeholder="Enter Your Name here"></label>
+            <label id="email-label">Email: <input type="email" required id="email" placeholder="Enter your email here"> </label>
+            <label id="number-label">Age (optional): <input type="number" id="number" min="13" max="120" placeholder="Age"></label>
+            <label id="select">Occupation: 
+                <select id="dropdown">
+                    <option value="" selected>Select any one</option>
+                    <option value="teacher">Teacher</option>
+                    <option value="student">Student</option>
+                    <option value="doctor">Doctor</option>
+                    <option value="others">Others</option>
+                </select>
+            </label>
+            <label>Gender: 
+                <label id="sex">
+                    <label> Male <input type="radio" name="gender" class="gender" value="radio"></label>
+                    <label>Female<input type="radio" name="gender" class="gender" value="radio"></label>
+                    <label>Others<input type="radio" name="gender" class="gender" value="radio"></label>
+                </label>
+        </label>
+        </section>
+
+        <section class="info">
+            <h2>Address Information</h2>
+            <label id="perm-address">
+                <h3>Permanent Address:</h3>
+                <label class="prov">Select Province: 
+                <select name="per-address" id="p-address">
+                    <option value="" selected>Select Province</option>
+                    <option value="no1">Province No. 1</option>
+                    <option value="no2">Province No. 2</option>
+                    <option value="no3">Bagmati</option>
+                    <option value="no4">Gandaki</option>
+                    <option value="no5">Lumbini</option>
+                    <option value="no6">Karnali</option>
+                    <option value="no7">Sudurpashchim</option>
+                </select> </label>
+                <label class="prov"> Address: <input type="text" name="p-city" placeholder="Enter your Address"></label>
+                <label class="prov">Ward no: <input type="number" name="p-ward" placeholder="Ward Number" min="1" max="32"></label>
+            </label>
+
+            <label id="temp-address">
+                <h3>Temporary Address:</h3>
+                <label class="prov">Select Province: 
+                <select name="temp-address" id="t-address">
+                    <option value="" selected>Select Provision</option>
+                    <option value="no1">Province No. 1</option>
+                    <option value="no2">Province No. 2</option>
+                    <option value="no3">Bagmati</option>
+                    <option value="no4">Gandaki</option>
+                    <option value="no5">Lumbini</option>
+                    <option value="no6">Karnali</option>
+                    <option value="no7">Sudurpashchim</option>
+                </select> </label>
+
+                <label class="prov">Address:<input type="text" name="t-city" placeholder="Enter your Address"></label>
+                <label class="prov">Ward no: <input type="number" name="t-ward" placeholder="Ward Number" min="1" max="32"></label>
+                </label>
+        </section>
+
+        <section class="info">
+            <label id="fav">Things you liked aout our cafe (check all that applies): 
+                <label class="eat"><input type="checkbox" name="food" value="food">Food</label>
+                <label class="eat"><input type="checkbox" name="drinks" value="drinks">Drinks</label>
+                <label class="eat"><input type="checkbox" name="dessert" value="dessert">Dessert</label>
+                <label class="eat"><input type="checkbox" name="service" value="service">Service</label>
+                <label class="eat"><input type="checkbox" name="place" value="place">Place</label>
+            </label>
+
+        </section>
+        <section class="info">
+            <h3>Suggestions: </h3>
+            <label id="like-dislike">How was the place? 
+                <label class="last"><input type="radio" name="like" value="radio">Nice</label>
+                <label class="last"><input type="radio" name="like" value="radio">Satisfied</label>
+                <label class="last"><input type="radio" name="like" value="radio">It was ok</label>
+                <label class="last"><input type="radio" name="like" value="radio">Not sure</label>
+                <label class="last"><input type="radio" name="like" value="radio">Unsatisfied</label>
+            </label>
+            <label>Any comments or suggestions? <textarea name="comment" cols="30" rows="10" placeholder="Enter Your Comment Here.."></textarea></label>
+        </section>
+        <button type="submit" id="submit">Submit</button>
+    </div>
+    </form>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* background-image: url(https://blog.vantagecircle.com/content/images/size/w1000/2020/08/employee-survey.png); */
+    background-image: linear-gradient( 115deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7) ), url(https://freeonlinesurveys.com/wp-content/uploads/2020/02/Buy-Survey-Responses.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    font-size: 16px;
+    color: white;
+}
+
+h1, h2, h3, p {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#description {
+    margin-top: 4px;
+}
+
+#container {
+    width: 65vw;
+    max-width: 500px;
+    min-width: 300px;
+    margin: 0 auto;
+  padding-bottom: 2em;
+}
+
+form {
+    width: 90vw;
+    max-width: 700px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding-bottom: 2em;
+    background-color: rgb(0, 238, 255, 0.4);
+}
+
+.info {
+    border: none;
+    padding: 2rem 0;
+    border-bottom: 3px solid #4d5bff;
+}
+
+.info:last-of-type {
+    border-bottom: none;
+    font-size: 16px;
+}
+
+label {
+    display: block;
+    margin: 0.5rem 0;
+}
+
+input, textarea, label, select {
+    margin: 10px 0 0 0;
+    padding: 5px;
+    width: 95%;
+    min-height: 2em;
+    border-radius: 10px;
+    text-align: left;
+}
+label {
+    font-size: 20px;
+}
+
+select {
+    width: 98%;
+    height: 40px;
+}
+#sex {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 10px -6px 0px;
+    padding-left: 0px;
+    width: 411px;
+}
+
+#sex label {
+    width: unset;
+    padding-left: 0px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    margin: 0 0.5em 0 0;
+}
+
+input[type="radio"] {
+    height: 20px;
+    width: 20px;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+input[type="checkbox"] {
+    height: 20px;
+    width: 20px;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+.eat {
+    padding-left: 15px;
+}
+  
+ button {
+    display: block;
+    width: 60%;
+    margin: 1em auto;
+    height: 2em;
+    font-size: 1.1rem;
+    color: rgb(255, 255, 255);
+    background-color: #008e07;
+    border-color: rgb(0, 0, 0);
+    min-width: 300px;
+    border-radius: 20px;
+  } 
+  
+ 
+.last, .eat {
+    font-size: 16px;
+}
