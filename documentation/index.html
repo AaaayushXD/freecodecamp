@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Documentation Page</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <nav id="navbar">
+        <header id="top">Python Documentation</header>
+        <ul>
+            <a href="#Introduction" class="nav-link"><li>Introduction</li></a>
+            <div class="divider"></div>
+            <a href="#User_Defined_Functions" class="nav-link"><li>User Defined Functions</li></a>
+            <div class="divider"></div>
+            <a href="#Variables" class="nav-link"><li>Variables</li></a>
+            <div class="divider"></div>
+            <a href="#String" class="nav-link"><li>String</li></a>
+            <div class="divider"></div>
+            <a href="#If_Statement" class="nav-link"><li>If statement</li></a>
+            <div class="divider"></div>
+            <a href="#For_Loop" class="nav-link"> <li>For Loop</li></a>
+            <div class="divider"></div>
+            <a href="#While_Loop" class="nav-link"><li>While Loop</li></a>
+            <div class="divider"></div>
+            <a href="#Tuples" class="nav-link"><li>Tuples</li></a>
+            <div class="divider"></div>
+            <a href="#Sorting" class="nav-link"><li>Sorting</li></a>
+            <div class="divider"></div>
+            <a href="#File_Handling" class="nav-link"><li>File Handling</li></a>
+            <div class="divider"></div>
+            <a href="#Array" class="nav-link"><li>Array</li></a>
+            <div class="divider"></div>
+            <a href="#Sets" class="nav-link"><li>Sets</li></a>
+            <div class="divider"></div>
+            <a href="#Classes" class="nav-link"><li>Classes</li></a>
+            <div class="divider"></div>
+           <a href="#Inheritance" class="nav-link"> <li>Inheritance</li></a>
+        </ul>
+    </nav>
+    <main id="main-doc">
+                            <!--Introduction-->
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <p class="text">Python is a dynamic, interpreted (bytecode-compiled) language. There are no type declarations of variables, parameters, functions, or methods in source code. This makes the code short and flexible, and you lose the compile-time type checking of the source code. Python tracks the types of all values at runtime and flags code that does not make sense as it runs.</p>
+            <p class="text"> Like C++ and Java, Python is case sensitive so "a" and "A" are different variables. The end of a line marks the end of a statement, so unlike C++ and Java, Python does not require a semicolon at the end of each statement. Comments begin with a '#' and extend to the end of the line.</p>
+            <p class="text"> What is Python mostly used for?
+                <ul>
+                    <li>web development (server-side),</li>
+                    <li>software development,</li>
+                    <li>mathematics,</li>
+                    <li>system scripting.</li>
+                </ul>
+            </p>
+        </section>
+        <div class="divider-max"></div>
+                            <!--USer defined functions-->
+        <section class="main-section" id="User_Defined_Functions">
+            <header>User Defined Functions</header>
+            <p class="text">
+                The def keyword defines the function with its parameters within parentheses and its code indented. The first line of a function can be a documentation string ("docstring") that describes what the function does. <br><br> The docstring can be a single line, or a multi-line description as in the example above. (Yes, those are "triple quotes," a feature unique to Python!) Variables defined in the function are local to that function, so the "result" in the above function is separate from a "result" variable in another function. The return statement can take an argument, in which case that is the value returned to the caller.
+            </p>
+            <code>
+                # Defines a "repeat" function that takes 2 arguments. <br>
+                def repeat(s, exclaim): <br>
+                """ <br>
+                Returns the string 's' repeated 3 times. <br>
+                If exclaim is true, add exclamation marks. <br>
+                """ <br>
+                <br>
+                result = s + s + s # can also use "s * 3" which is faster (Why?) <br>
+                if exclaim: <br>
+                    result = result + '!!!'  <br>
+                return result <br>
+            </code>
+        </section>
+        <div class="divider-max"></div>
+                                     <!--Variables-->
+        <section class="main-section" id="Variables">
+            <header>Variables</header>
+            <p class="text">
+                Since Python variables don't have any type spelled out in the source code, it's extra helpful to give meaningful names to your variables to remind yourself of what's going on. So use "name" if it's a single name, and "names" if it's a list of names, and "tuples" if it's a list of tuples. <br><br> Many basic Python errors result from forgetting what type of value is in each variable, so use your variable names (all you have really) to help keep things straight.
+            </p>
+        </section>
+        <div class="divider-max"></div>
+                                    <!--Strings-->
+        <section class="main-section" id="String">
+            <header>String</header>
+            <p class="text">Python has a built-in string class named "str" with many handy features (there is an older module named "string" which you should not use). String literals can be enclosed by either double or single quotes, although single quotes are more commonly used. Backslash escapes work the usual way within both single and double quoted literals -- e.g. \n \' \". <br><br> A double quoted string literal can contain single quotes without any fuss (e.g. "I didn't do it") and likewise single quoted string can contain double quotes. A string literal can span multiple lines, but there must be a backslash \ at the end of each line to escape the newline. String literals inside triple quotes, """ or ''', can span multiple lines of text.</p>
+            <p class="text">Unlike Java, the '+' does not automatically convert numbers or other types to string form. The str() function converts values to a string form so they can be combined with other strings.</p>
+        </section>
+        <div class="divider-max"></div>
+                                    <!--IF else-->
+        <section class="main-section" id="If_Statement">
+            <header>If Statement</header>
+            <p class="text">
+                Python does not use { } to enclose blocks of code for if/loops/function etc.. Instead, Python uses the colon (:) and indentation/whitespace to group statements. The boolean test for an if does not need to be in parenthesis (big difference from C++/Java), and it can have *elif* and *else* clauses (mnemonic: the word "elif" is the same length as the word "else").
+            </p>
+            <p class="text">
+                Here's what the code might look like for a health app providing drink recommendations throughout the day -- notice how each block of then/else statements starts with a : and the statements are grouped by their indentation:
+            </p>
+            <code>
+                if time_hour >= 0 and time_hour <= 24: <br>
+                print('Suggesting a drink option...')   <br>
+                if mood == 'sleepy' and time_hour < 10: <br>
+                  print('coffee')   <br>
+                elif mood == 'thirsty' or time_hour < 2: <br>
+                  print('lemonade') <br>
+                else: <br>
+                  print('water')  <br>
+            </code>
+        </section>
+        <div class="divider-max"></div>
+                        <!--For Loop-->
+        <section class="main-section" id="For_Loop">
+            <header>For Loop</header>
+            <p class="text">
+                Python's *for* and *in* constructs are extremely useful, and the first use of them we'll see is with lists. The *for* construct -- for var in list -- is an easy way to look at each element in a list (or other collection). Do not add or remove from the list during iteration.
+               <br><br> The *in* construct on its own is an easy way to test if an element appears in a list (or other collection) -- value in collection -- tests if the value is in the collection, returning True/False.
+            </p>
+
+            <code>
+                squares = [1, 4, 9, 16] <br>
+                sum = 0 <br>
+                for num in squares: <br>
+                  sum += num <br>
+                print(sum)  ## 30  <br>
+            </code>
+        </section>
+        <div class="divider-max"></div>
+                        <!--While Loop-->
+        <section class="main-section" id="While_Loop">
+            <header>While Loop</header>
+            <p class="text">Python also has the standard while-loop, and the *break* and *continue* statements work as in C++ and Java, altering the course of the innermost loop. The above for/in loops solves the common case of iterating over every element in a list, but the while loop gives you total control over the index numbers. <br><br> Here's a while loop which accesses every 3rd element in a list:</p>
+            <code>
+                ## Access every 3rd element in a list <br>
+                i = 0 <br>
+                while i < len(a): <br>
+                  print(a[i]) <br>
+                  i = i + 3 <br>
+            </code>
+        </section>
+        <div class="divider-max"></div>
+                        <!--Tuples-->
+        <section class="main-section" id="Tuples">
+            <header>Tuples</header>
+            <p class="text">A tuple is a fixed size grouping of elements, such as an (x, y) co-ordinate. Tuples are like lists, except they are immutable and do not change size (tuples are not strictly immutable since one of the contained elements could be mutable). Tuples play a sort of "struct" role in Python -- a convenient way to pass around a little logical, fixed size bundle of values. A function that needs to return multiple values can just return a tuple of the values. <br><br> For example, if I wanted to have a list of 3-d coordinates, the natural python representation would be a list of tuples, where each tuple is size 3 holding one (x, y, z) group.</p>
+            <p class="text">To create a tuple, just list the values within parenthesis separated by commas. The "empty" tuple is just an empty pair of parenthesis. Accessing the elements in a tuple is just like a list -- len(), [ ], for, in, etc. all work the same.</p>
+            <code>
+                tuple = (1, 2, 'hi')    <br>
+                print(len(tuple))  ## 3   <br>
+                print(tuple[2])    ## hi   <br>
+                tuple[2] = 'bye'  ## NO, tuples cannot be changed   <br>
+                tuple = (1, 2, 'bye')  ## this works   <br>
+            </code>
+        </section>
+        <div class="divider-max"></div>
+                            <!--Sorting in python-->
+        <section class="main-section" id="Sorting">
+            <header>Sorting</header>
+            <p class="text">The easiest way to sort is with the sorted(list) function, which takes a list and returns a new list with those elements in sorted order. The original list is not changed.</p>
+            <code>
+                a = [5, 1, 4, 3]  <br>
+                print(sorted(a))  ## [1, 3, 4, 5]  <br>
+                print(a)  ## [5, 1, 4, 3]  <br>
+            </code> 
+            <p class="text">It's most common to pass a list into the sorted() function, but in fact it can take as input any sort of iterable collection. The older list.sort() method is an alternative detailed below. The sorted() function seems easier to use compared to sort(), so I recommend using sorted().</p>
+        </section>
+        <div class="divider-max"></div>
+                    <!--File handling in python-->
+        <section class="main-section" id="File_Handling">
+            <header>File Handling</header>
+            <p class="text"> 
+                The key function for working with files in Python is the open() function.    
+                The open() function takes two parameters; filename, and mode. There are four different methods (modes) for opening a file:
+                <ul>
+                    <li>r <span> - Read - Default value. Opens a file for reading, error if the file does not exist</span></li>
+                    <li>a <span> - Append - Opens a file for appending, creates the file if it does not exist</span></li>
+                    <li>w <span> - Write - Opens a file for writing, creates the file if it does not exist</span></li>
+                    <li>x <span> - Create - Creates the specified file, returns an error if the file exists</span></li>
+                </ul>
+            </p>
+            <code>
+                To open a file for reading it is enough to specify the name of the file: <br>
+                f = open("demofile.txt")
+            </code>
+        </section>
+        <div class="divider-max"></div>
+                    <!--Array in python-->
+        <section class="main-section" id="Array">
+            <header>Array</header>
+            <p class="text">Arrays are used to store multiple values in one single variable:</p>
+            <code>
+                Create an array containing car names: <br>
+            cars = ["Ford", "Volvo", "BMW"] <br>
+            </code>
+            <p class="text">
+                Python has a set of built-in methods that you can use on lists/arrays.
+                <ul>
+                    <li>append() <span> - Adds an element at the end of the list</span></li>
+                    <li>clear() <span> - Removes all the elements from the list</span></li>
+                    <li>sort() <span> - Sorts the list</span></li>
+                    <li>reverse() <span> - Reverses the order of the list</span></li>
+                    <li> copy() <span> - Returns a copy of the list</span></li>
+                </ul>
+            </p>
+        </section>
+        <div class="divider-max"></div>
+                    <!--Sets in python-->
+        <section class="main-section" id="Sets">
+            <header>Sets</header>
+            <p class="text">Sets are used to store multiple items in a single variable.
+                Set is one of 4 built-in data types in Python used to store collections of data, the other 3 are List, Tuple, and Dictionary, all with different qualities and usage.
+                A set is a collection which is unordered, unchangeable*, and unindexed.</p>
+                <code>
+                    Example <br>
+                    Create a Set: <br>
+                    thisset = {"apple", "banana", "cherry"}  <br>
+                    print(thisset) <br>
+                </code>
+        </section>
+        <div class="divider-max"></div>
+                    <!--Classes/object in python-->
+        <section class="main-section" id="Classes">
+            <header>Classes</header>
+            <p class="text">Python is an object oriented programming language.
+                Almost everything in Python is an object, with its properties and methods.           
+                A Class is like an object constructor, or a "blueprint" for creating objects.</p>
+
+                <code>
+                    Create a class named MyClass, with a property named x: <br>
+                    class MyClass: <br>
+                      x = 5 <br>
+                </code>
+        </section>
+        <div class="divider-max"></div>
+                    <!--Inheritence in python-->
+        <section class="main-section" id="Inheritance">
+            <header>Inheritance</header>
+            <p class="text">
+                Inheritance allows us to define a class that inherits all the methods and properties from another class. <br>
+                Parent class is the class being inherited from, also called base class. <br>
+                Child class is the class that inherits from another class, also called derived class. <br>
+            </p>
+
+            <code>
+                Create a Parent class:                    <br>
+                class Person:  <br>
+                def __init__(self, fname, lname):  <br>
+                    self.firstname = fname  <br>
+                    self.lastname = lname  <br>
+                <br>
+                Create a child class:   <br>
+                class Student(Person):  <br>
+                    pass
+            </code>
+        </section>
+    </main>
+</body>
+</html>

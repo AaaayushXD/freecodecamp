@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    padding: 0%;
+    margin: 0%;
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: rgb(171, 216, 225);
+    color: rgba(15, 11, 51, 0.756);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav {
+    background-color: rgb(55, 105, 132);
+    color: rgba(24, 23, 23, 0.515);
+    margin: 0;
+    padding: 5px 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 23%;
+    height: 100%;    
+    text-align: left;
+    border-right: rgb(0, 33, 76) solid 5px;
+    letter-spacing: 0.5px;
+    overflow: hidden;
+}
+
+nav ul{
+    list-style: none;
+    margin: 20px auto;
+}
+
+nav li {
+        padding: 10px 5px;
+        text-align: left;
+        font-size: 20px;
+        font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+nav li:hover {
+    background-color: rgba(145, 193, 255, 0.91) ;
+    cursor: pointer;
+    color: aliceblue;
+}
+
+.divider {
+    border-bottom: rgb(0, 33, 76) solid 2px;
+}
+
+.divider-max {
+    border-bottom: rgba(39, 88, 109, 0.444) solid 3px;
+}
+#top {
+    color: #fff;
+}
+header {
+    margin: 2px;
+    font-size: 20px;
+    color: rgb(101, 31, 1);
+    font-weight: 600;
+}
+
+
+main {
+    margin: 5px 18px;
+    padding: 5px;
+    position: absolute;
+    left: 23%;
+
+}
+
+section {
+    display: block;
+    margin: 5px 10px 10px 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+code {
+    display: block;
+    width: 100%;
+    background-color: rgba(186, 226, 226, 0.727);
+    color: rgba(6, 30, 46, 0.667);
+    margin: 5px;
+    padding: 5px 5px 10px 15px;
+    font-size: 14px;
+}
+
+.text {
+    margin: 9px;
+    padding-left: 15px;
+    padding-right: 5px;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+@media (max-width: 1000px) {
+    nav {
+        max-width: 150px;
+        padding: 0;
+        margin: 0%;
+    }
+    nav li, nav header {
+        font-size: 12px;
+    }
+    nav ul {
+        padding: 0;
+    }
+
+    main {
+       margin: 0;
+       overflow: hidden;
+    }
+}
